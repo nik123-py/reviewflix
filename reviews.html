@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reviews - ReviewFlix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body class="dark">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-film logo-icon"></i>
+                <h1>Review<span class="neon-text">Flix</span></h1>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="discover.html"><i class="fas fa-compass"></i> <span>Discover</span></a></li>
+                    <li><a href="recommendations.html"><i class="fas fa-robot"></i> <span>AI Picks</span></a></li>
+                    <li class="active"><a href="reviews.html"><i class="fas fa-star"></i> <span>My Reviews</span></a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="img/avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <h3>John Doe</h3>
+                    <p>Movie Enthusiast</p>
+                </div>
+            </div>
+            <button class="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for movies...">
+                </div>
+                <div class="header-actions">
+                    <button class="neon-button"><i class="fas fa-bell"></i></button>
+                    <button class="neon-button"><i class="fas fa-user"></i></button>
+                </div>
+            </header>
+
+            <div class="page-header">
+                <h1 class="page-title">My <span class="neon-text">Reviews</span></h1>
+                <button class="neon-button primary" id="write-review-btn">
+                    <i class="fas fa-pen"></i> Write a Review
+                </button>
+            </div>
+
+            <div class="reviews-container">
+                <div class="reviews-tabs">
+                    <button class="tab-btn active" data-tab="my-reviews">My Reviews</button>
+                    <button class="tab-btn" data-tab="saved-reviews">Saved Reviews</button>
+                </div>
+
+                <div class="tab-content active" id="my-reviews">
+                    <div class="user-reviews">
+                        <div class="review-item">
+                            <div class="review-movie">
+                                <img src="img/movie1.jpg" alt="Movie Poster">
+                                <div class="movie-info">
+                                    <h3>Interstellar</h3>
+                                    <div class="movie-meta">
+                                        <span>2014</span>
+                                        <span>Sci-Fi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                    <div class="review-date">
+                                        <i class="far fa-calendar"></i> June 15, 2023
+                                    </div>
+                                </div>
+                                <p>A masterpiece of science fiction that combines stunning visuals with a deeply emotional story. Christopher Nolan has created a film that is both intellectually stimulating and emotionally resonant. The performances, especially from Matthew McConaughey, are outstanding.</p>
+                                <div class="review-actions">
+                                    <button class="review-action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="review-action-btn delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-movie">
+                                <img src="img/movie3.jpg" alt="Movie Poster">
+                                <div class="movie-info">
+                                    <h3>The Matrix</h3>
+                                    <div class="movie-meta">
+                                        <span>1999</span>
+                                        <span>Sci-Fi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>4.0</span>
+                                    </div>
+                                    <div class="review-date">
+                                        <i class="far fa-calendar"></i> May 22, 2023
+                                    </div>
+                                </div>
+                                <p>A groundbreaking film that revolutionized action sequences and visual effects. The concept of reality vs. simulation was mind-blowing when it was released and still holds up today. The philosophical themes add depth to what could have been just another action movie.</p>
+                                <div class="review-actions">
+                                    <button class="review-action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="review-action-btn delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="saved-reviews">
+                    <div class="saved-reviews">
+                        <div class="review-item">
+                            <div class="review-movie">
+                                <img src="img/movie10.jpg" alt="Movie Poster">
+                                <div class="movie-info">
+                                    <h3>The Dark Knight</h3>
+                                    <div class="movie-meta">
+                                        <span>2008</span>
+                                        <span>Action</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <img src="img/user2.jpg" alt="User Avatar">
+                                        <span>Mike Johnson</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+                                <p>Heath Ledger's performance as the Joker is one of the greatest villain portrayals in cinema history. The film transcends the superhero genre to become a crime thriller that explores complex themes of chaos, order, and morality.</p>
+                                <div class="review-actions">
+                                    <button class="review-action-btn unsave-btn"><i class="fas fa-bookmark"></i> Unsave</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Write Review Modal -->
+            <div class="modal" id="review-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Write a Review</h2>
+                        <button class="close-modal"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="movie-search">Search for a movie</label>
+                            <div class="search-input">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="movie-search" placeholder="Type movie title...">
+                            </div>
+                            <div class="search-results">
+                                <div class="search-result-item">
+                                    <img src="img/movie2.jpg" alt="Movie Poster">
+                                    <div>
+                                        <h4>Inception</h4>
+                                        <span>2010 • Action, Sci-Fi</span>
+                                    </div>
+                                </div>
+                                <div class="search-result-item">
+                                    <img src="img/movie4.jpg" alt="Movie Poster">
+                                    <div>
+                                        <h4>Blade Runner 2049</h4>
+                                        <span>2017 • Sci-Fi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selected-movie">
+                            <div class="selected-movie-poster">
+                                <img src="img/movie2.jpg" alt="Movie Poster">
+                            </div>
+                            <div class="selected-movie-info">
+                                <h3>Inception</h3>
+                                <div class="movie-meta">
+                                    <span>2010</span>
+                                    <span>Action, Sci-Fi</span>
+                                    <span>148 min</span>
+                                </div>
+                                <p>A thief who steals corporate secrets through dream-sharing technology is given the task of planting an idea into a CEO's mind.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Rating</label>
+                            <div class="star-rating">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-text">Your Review</label>
+                            <textarea id="review-text" rows="6" placeholder="Share your thoughts on this movie..."></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="neon-button outline" id="cancel-review">Cancel</button>
+                        <button class="neon-button primary" id="submit-review">Submit Review</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Review<span class="neon-text">Flix</span></h2>
+                <p>Discover, review, and share your movie experiences</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="recommendations.html">AI Picks</a></li>
+                        <li><a href="reviews.html">My Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ReviewFlix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/reviews.js"></script>
+</body>
+</html>
+

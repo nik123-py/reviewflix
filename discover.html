@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Movies - ReviewFlix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/discover.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body class="dark">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-film logo-icon"></i>
+                <h1>Review<span class="neon-text">Flix</span></h1>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li class="active"><a href="discover.html"><i class="fas fa-compass"></i> <span>Discover</span></a></li>
+                    <li><a href="recommendations.html"><i class="fas fa-robot"></i> <span>AI Picks</span></a></li>
+                    <li><a href="reviews.html"><i class="fas fa-star"></i> <span>My Reviews</span></a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="img/avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <h3>John Doe</h3>
+                    <p>Movie Enthusiast</p>
+                </div>
+            </div>
+            <button class="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for movies...">
+                </div>
+                <div class="header-actions">
+                    <button class="neon-button"><i class="fas fa-bell"></i></button>
+                    <button class="neon-button"><i class="fas fa-user"></i></button>
+                </div>
+            </header>
+
+            <div class="page-header">
+                <h1 class="page-title">Discover <span class="neon-text">Movies</span></h1>
+                <p class="page-subtitle">Swipe right to like, left to dislike</p>
+            </div>
+
+            <div class="discover-container">
+                <div class="filter-panel">
+                    <h3>Filters</h3>
+                    <div class="filter-group">
+                        <label>Genre</label>
+                        <select id="genre-filter">
+                            <option value="all">All Genres</option>
+                            <option value="action">Action</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="horror">Horror</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="thriller">Thriller</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Year</label>
+                        <div class="range-slider">
+                            <div class="range-values">
+                                <span id="year-min">1990</span>
+                                <span id="year-max">2023</span>
+                            </div>
+                            <input type="range" id="year-range" min="1950" max="2023" value="1990" class="range-min">
+                            <input type="range" id="year-range" min="1950" max="2023" value="2023" class="range-max">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Rating</label>
+                        <div class="range-slider">
+                            <div class="range-values">
+                                <span id="rating-min">0</span>
+                                <span id="rating-max">10</span>
+                            </div>
+                            <input type="range" id="rating-range" min="0" max="10" value="0" class="range-min">
+                            <input type="range" id="rating-range" min="0" max="10" value="10" class="range-max">
+                        </div>
+                    </div>
+                    <button class="neon-button primary apply-filters">Apply Filters</button>
+                </div>
+
+                <div class="swipe-container">
+                    <div class="swipe-card-stack">
+                        <div class="swipe-card" data-movie-id="1">
+                            <div class="swipe-card-inner">
+                                <div class="movie-poster">
+                                    <img src="img/movie1.jpg" alt="Movie Poster">
+                                    <div class="movie-rating">9.2</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Interstellar</h3>
+                                    <div class="movie-meta">
+                                        <span>2014</span>
+                                        <span>Sci-Fi</span>
+                                        <span>169 min</span>
+                                    </div>
+                                    <p class="movie-description">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+                                </div>
+                                <div class="swipe-indicators">
+                                    <div class="swipe-indicator like"><i class="fas fa-heart"></i></div>
+                                    <div class="swipe-indicator dislike"><i class="fas fa-times"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swipe-card" data-movie-id="2">
+                            <div class="swipe-card-inner">
+                                <div class="movie-poster">
+                                    <img src="img/movie2.jpg" alt="Movie Poster">
+                                    <div class="movie-rating">8.7</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>Inception</h3>
+                                    <div class="movie-meta">
+                                        <span>2010</span>
+                                        <span>Action</span>
+                                        <span>148 min</span>
+                                    </div>
+                                    <p class="movie-description">A thief who steals corporate secrets through dream-sharing technology is given the task of planting an idea into a CEO's mind.</p>
+                                </div>
+                                <div class="swipe-indicators">
+                                    <div class="swipe-indicator like"><i class="fas fa-heart"></i></div>
+                                    <div class="swipe-indicator dislike"><i class="fas fa-times"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swipe-card" data-movie-id="3">
+                            <div class="swipe-card-inner">
+                                <div class="movie-poster">
+                                    <img src="img/movie3.jpg" alt="Movie Poster">
+                                    <div class="movie-rating">9.0</div>
+                                </div>
+                                <div class="movie-info">
+                                    <h3>The Matrix</h3>
+                                    <div class="movie-meta">
+                                        <span>1999</span>
+                                        <span>Sci-Fi</span>
+                                        <span>136 min</span>
+                                    </div>
+                                    <p class="movie-description">A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+                                </div>
+                                <div class="swipe-indicators">
+                                    <div class="swipe-indicator like"><i class="fas fa-heart"></i></div>
+                                    <div class="swipe-indicator dislike"><i class="fas fa-times"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swipe-actions">
+                        <button class="swipe-action-btn dislike-btn"><i class="fas fa-times"></i></button>
+                        <button class="swipe-action-btn like-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Review<span class="neon-text">Flix</span></h2>
+                <p>Discover, review, and share your movie experiences</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="recommendations.html">AI Picks</a></li>
+                        <li><a href="reviews.html">My Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ReviewFlix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/discover.js"></script>
+</body>
+</html>
+

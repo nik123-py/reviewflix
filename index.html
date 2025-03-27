@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewFlix - Movie Reviews & Recommendations</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body class="dark">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-film logo-icon"></i>
+                <h1>Review<span class="neon-text">Flix</span></h1>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="discover.html"><i class="fas fa-compass"></i> <span>Discover</span></a></li>
+                    <li><a href="recommendations.html"><i class="fas fa-robot"></i> <span>AI Picks</span></a></li>
+                    <li><a href="reviews.html"><i class="fas fa-star"></i> <span>My Reviews</span></a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> <span>Profile</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="img/avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <h3>John Doe</h3>
+                    <p>Movie Enthusiast</p>
+                </div>
+            </div>
+            <button class="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for movies...">
+                </div>
+                <div class="header-actions">
+                    <button class="neon-button"><i class="fas fa-bell"></i></button>
+                    <button class="neon-button"><i class="fas fa-user"></i></button>
+                </div>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover & Review <span class="neon-text">Movies</span></h1>
+                    <p class="hero-subtitle">Get personalized recommendations powered by AI</p>
+                    <div class="hero-buttons">
+                        <a href="discover.html" class="neon-button primary">Discover Movies</a>
+                        <a href="reviews.html" class="neon-button outline">Write a Review</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- For You Section -->
+            <section class="section for-you-section">
+                <div class="section-header">
+                    <h2 class="section-title">For You <span class="neon-text">Picks</span></h2>
+                    <a href="recommendations.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="movie-carousel">
+                    <div class="movie-card featured">
+                        <div class="movie-poster">
+                            <img src="img/movie1.jpg" alt="Movie Poster">
+                            <div class="movie-rating">9.2</div>
+                        </div>
+                        <div class="movie-info">
+                            <h3>Interstellar</h3>
+                            <div class="movie-meta">
+                                <span>2014</span>
+                                <span>Sci-Fi</span>
+                                <span>169 min</span>
+                            </div>
+                            <p class="movie-description">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+                            <div class="movie-actions">
+                                <button class="neon-button primary"><i class="fas fa-thumbs-up"></i> Recommend</button>
+                                <button class="neon-button outline"><i class="fas fa-thumbs-down"></i> Pass</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trending Section -->
+            <section class="section trending-section">
+                <div class="section-header">
+                    <h2 class="section-title">Trending <span class="neon-text">Now</span></h2>
+                    <a href="discover.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <img src="img/movie2.jpg" alt="Movie Poster">
+                            <div class="movie-rating">8.7</div>
+                            <div class="movie-overlay">
+                                <div class="overlay-content">
+                                    <h3>Inception</h3>
+                                    <p>A thief who steals corporate secrets through dream-sharing technology is given the task of planting an idea into a CEO's mind.</p>
+                                    <div class="overlay-actions">
+                                        <button class="neon-button small"><i class="fas fa-heart"></i></button>
+                                        <button class="neon-button small"><i class="fas fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3>Inception</h3>
+                            <div class="movie-meta">
+                                <span>2010</span>
+                                <span>Action</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <img src="img/movie3.jpg" alt="Movie Poster">
+                            <div class="movie-rating">9.0</div>
+                            <div class="movie-overlay">
+                                <div class="overlay-content">
+                                    <h3>The Matrix</h3>
+                                    <p>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</p>
+                                    <div class="overlay-actions">
+                                        <button class="neon-button small"><i class="fas fa-heart"></i></button>
+                                        <button class="neon-button small"><i class="fas fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3>The Matrix</h3>
+                            <div class="movie-meta">
+                                <span>1999</span>
+                                <span>Sci-Fi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <img src="img/movie4.jpg" alt="Movie Poster">
+                            <div class="movie-rating">8.5</div>
+                            <div class="movie-overlay">
+                                <div class="overlay-content">
+                                    <h3>Blade Runner 2049</h3>
+                                    <p>Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.</p>
+                                    <div class="overlay-actions">
+                                        <button class="neon-button small"><i class="fas fa-heart"></i></button>
+                                        <button class="neon-button small"><i class="fas fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3>Blade Runner 2049</h3>
+                            <div class="movie-meta">
+                                <span>2017</span>
+                                <span>Sci-Fi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">
+                            <img src="img/movie5.jpg" alt="Movie Poster">
+                            <div class="movie-rating">7.9</div>
+                            <div class="movie-overlay">
+                                <div class="overlay-content">
+                                    <h3>Dune</h3>
+                                    <p>Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset in the galaxy.</p>
+                                    <div class="overlay-actions">
+                                        <button class="neon-button small"><i class="fas fa-heart"></i></button>
+                                        <button class="neon-button small"><i class="fas fa-star"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3>Dune</h3>
+                            <div class="movie-meta">
+                                <span>2021</span>
+                                <span>Adventure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Reviews Section -->
+            <section class="section recent-reviews">
+                <div class="section-header">
+                    <h2 class="section-title">Recent <span class="neon-text">Reviews</span></h2>
+                    <a href="reviews.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="reviews-list">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="img/user1.jpg" alt="User Avatar">
+                                <div>
+                                    <h4>Jane Smith</h4>
+                                    <span class="review-date">2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="review-movie-title">Oppenheimer</h3>
+                        <p class="review-content">A masterpiece of storytelling and cinematography. Christopher Nolan has outdone himself with this historical drama that keeps you engaged throughout its runtime.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="img/user2.jpg" alt="User Avatar">
+                                <div>
+                                    <h4>Mike Johnson</h4>
+                                    <span class="review-date">1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="review-movie-title">Barbie</h3>
+                        <p class="review-content">Surprisingly thoughtful and entertaining. While not perfect, it offers a fresh take on the iconic character with some genuinely funny moments.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Review<span class="neon-text">Flix</span></h2>
+                <p>Discover, review, and share your movie experiences</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="recommendations.html">AI Picks</a></li>
+                        <li><a href="reviews.html">My Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ReviewFlix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

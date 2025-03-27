@@ -1,0 +1,108 @@
+/* Recommendations Page Specific Styles */
+
+.ai-info-card {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: var(--card-radius);
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.1);
+}
+
+.ai-info-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--neon-quaternary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--bg-primary);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+}
+
+.ai-info-content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--neon-quaternary);
+}
+
+.ai-info-content p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.refresh-recommendations {
+  background-color: var(--neon-quaternary);
+  border-color: var(--neon-quaternary);
+}
+
+.refresh-recommendations:hover {
+  background-color: transparent;
+  border-color: var(--neon-quaternary);
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}
+
+.recommendation-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.recommendation-category {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-progress-container {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  text-align: center;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.1);
+  display: none;
+}
+
+.ai-progress-container h3 {
+  color: var(--neon-quaternary);
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--neon-quaternary);
+  width: 0%;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}
+
+.progress-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .ai-info-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
